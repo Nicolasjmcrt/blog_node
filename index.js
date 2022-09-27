@@ -6,21 +6,32 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/post', (req, res) => {
-    res.send('Got a GET request at /post')
-  })
+app.get('/topic/id', (req, res) => {
+    res.send('Got a GET request at /topic/id')
+})
 
+app.get('/topic', (req, res) => {
+    res.send('Got a GET request at /topic')
+})
 
-app.post('/post', function (req, res) {
-    res.send('Got a POST request at /post');
-  });
-
-app.put('/post', function (req, res) {
-    res.send('Got a PUT request at /post');
+app.post('/topic', function (req, res) {
+    res.send('Got a POST request at /topic');
 });
 
-app.delete('/post', function (req, res) {
-    res.send('Got a DELETE request at /post');
+app.delete('/topic', function (req, res) {
+    res.send('Got a DELETE request at /topic');
+});
+
+app.get('/user', (req, res) => {
+  res.send('Got a GET request at /user')
+})
+
+app.post('/user', function (req, res) {
+  res.send('Got a POST request at /user');
+});
+
+app.delete('/user', function (req, res) {
+  res.send('Got a DELETE request at /user');
 });
 
 app.listen(port, () => {
